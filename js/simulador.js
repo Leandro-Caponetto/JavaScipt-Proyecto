@@ -2,7 +2,7 @@
 
 
 
-/*
+
 function ingresarDatos(mensaje){
     return prompt(mensaje)
 }
@@ -28,8 +28,7 @@ const platos = new Producto("hanburgesa", 850.99)
 function calcularIva(valor){
     console.log("El total con IVA es: $" + valor * 1.21);
 }  
-*/
-/*
+
 let plato = parseInt(ingresarDatos("\t ---Ingrese el plato deceado--- \n 0)-SALIR \n 1)- HANBUERGESAS $850.99. \n 2)- SNACK $750.99 . \n 3)- AVES $1500.99 .\n 4)- PIZZAS $950.99. \n 5)- POSTRES $715.99 \n 6)- POLLO FRITO $850.99 \n "));
 while(plato !=0){
     switch(plato){
@@ -85,5 +84,8 @@ while(plato !=0){
         prompt("\t ---FORMAS DE PAGO--- \n 0)-SALIR \n 1)- TARJETA DE CREDITO. \n 2)-DEVITO. \n 3)- MECADO PAGO.\n ");
         alert("Su pago fue procesado correctamente")
     }
+
+
+    plato = parseInt(ingresarDatos("\t ---Ingrese el plato deceado--- \n 0)-SALIR \n 1)- HANBUERGESAS $850.99. \n 2)- SNACK $750.99 . \n 3)- AVES $1500.99 .\n 4)- PIZZAS $950.99. \n 5)- POSTRES $715.99 \n 6)- POLLO FRITO $850.99 \n "));
 }    
-*/
+
