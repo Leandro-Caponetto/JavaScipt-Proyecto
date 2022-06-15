@@ -127,11 +127,13 @@ const productos = [
     
 ]
 
-
+function ingresarDatos(mensaje){
+    return prompt(mensaje)
+}
 
 let carrito = []
 
-//Utilizo ciclo,  map y reduce
+//Utilizo ciclo, find, findIndex, map y reduce
 const agregarProductoCarrito = (id) => {
     let productoEncontrado = productos.find(producto => producto.Id === id)
     let productoCarrito = carrito.find(producto => producto.Id === id)
@@ -149,7 +151,7 @@ const agregarProductoCarrito = (id) => {
 }
 
 
-let nombre = prompt("ingrese su nombre")
+let nombre = ingresarDatos("Ingrese su nombre")
 
 const saludar = (nombre) => {
     alert("Bienvenido: " + nombre)
@@ -159,13 +161,13 @@ saludar(nombre)
 
 
 while (nombre !== "salir") {
-    let idProducto = Number(prompt("Ingrese el numero del plato que desea comprar:" + "\n" + productos.map((producto) => ` \n ${producto.Id} - ${producto.Nombre} - $ ${producto.Precio}`)))
+    let idProducto = Number(ingresarDatos("Ingrese el numero del plato que desea comprar:" + "\n" + productos.map((producto) => ` \n ${producto.Id} - ${producto.Nombre} - $ ${producto.Precio}`)))
     agregarProductoCarrito(idProducto)
-    let opcion = prompt("Si desea seguir comprando, introduzca: si" + "\n" + "para finalizar introduzca: salir")
+    let opcion = ingresarDatos("Si desea seguir comprando, introduzca: si" + "\n" + "para finalizar introduzca: salir")
     if (opcion === "si") {
-        idProducto = Number(prompt("Ingrese el numero del plato que desea comprar:" + "\n" + productos.map((producto) => ` \n ${producto.Id} - ${producto.Nombre} - $ ${producto.Precio}`)))
+        idProducto = Number(ingresarDatos("Ingrese el numero del plato que desea comprar:" + "\n" + productos.map((producto) => ` \n ${producto.Id} - ${producto.Nombre} - $ ${producto.Precio}`)))
         agregarProductoCarrito(idProducto)
-        opcion = prompt("Si desea seguir comprando, introduzca: si" + "\n" + "para finalizar introduzca: salir")
+        opcion = ingresarDatos("Si desea seguir comprando, introduzca: si" + "\n" + "para finalizar introduzca: salir")
     }
     if (opcion === "salir") {
         alert("Gracias por su compra. Su recibo es: " +
@@ -178,6 +180,41 @@ while (nombre !== "salir") {
         break
     }
 } 
+
+
+
+
+let pagos = ingresarDatos("Ingrese:  \n 1)-Si para ir a las formas de pagos: \n 2)- Salir  : ");
+
+while(pagos !== "salir"){
+    let fpago = parseInt(ingresarDatos("\t ---FORMAS DE PAGO--- \n 1)- TARJETA DE CREDITO.  \n 2)- MECADO PAGO.\n 3)- DEVITO."));
+        
+
+    switch(fpago){
+        case 1:
+            alert("Su pago fue procesado correctamente");
+            break;
+        case 2:
+            alert("Su pago fue procesado correctamente");
+            break;
+        case 3:
+            alert("Su pago fue procesado correctamente");
+            break; 
+    
+        default:
+            alert("Igreso incorrecto" );
+            break;
+        
+                    
+    }
+
+
+
+   pagos = ingresarDatos("Ingrese:  \n 1)-Si para ir a las formas de pagos: \n 2)-Salir   : ");
+   
+    
+
+}    
 
 
 
