@@ -1,3 +1,19 @@
+const card = document.querySelector(".card");
+
+const contador = document.querySelector('#contador'),
+btnMas = document.querySelector('#aumentar'),
+btnMenos = document.querySelector('#disminuir')
+platoImg = document.querySelector("#fotoProducto"),
+platoNombre = document.querySelector("#tituloProducto"),
+platoDescripcion = document.querySelector("#discripcionProducto"),
+platoPrecio = document.querySelector("#precioProducto"),
+btnGuardar = document.querySelector("#btnGuardar"),
+carrito = document.querySelector("#carrito");
+
+
+
+
+
 
 
 
@@ -7,24 +23,20 @@
 
 
 
-
-    
-
-
 const productos = [
     {
         "Id": 1,
         "Nombre": "Jugo Esprimido",
         "Descripcion": "Deliciosas frutas esprimida",
-        "Precio": 150,
+        "Precio": "$" + 850,
         "Foto": "./img/menu-9.jpg",
         "Categoria": "Bebidas"
     },
     {
         "Id": 2,
-        "Nombre": "Hanburgesas- (Queso y panceta)",
-        "Descripcion": "Una riquisima Hambuegesa con queso y panceta",
-        "Precio": 850.99,
+        "Nombre": "Haburgesas",
+        "Descripcion": " Hambuegesa con queso y panceta",
+        "Precio": "$" + 850,
         "Foto": "./img/dish-1.png",
         "Categoria": "Minutas"
     },
@@ -32,7 +44,7 @@ const productos = [
         "Id": 3,
         "Nombre": "Snack",
         "Descripcion": "Pollo rebosado y frito",
-        "Precio": 750.99,
+        "Precio": "$" + 750,
         "Foto": "./img/dish-2.png",
         "Categoria": "Minutas"
     },
@@ -40,7 +52,7 @@ const productos = [
         "Id": 4,
         "Nombre": "Aves",
         "Descripcion": "Pollo al horno",
-        "Precio": 1500.99,
+        "Precio": "$" + 1500,
         "Foto": "./img/dish-3.png",
         "Categoria": "Plato principal"
     },
@@ -48,7 +60,7 @@ const productos = [
         "Id": 5,
         "Nombre": "Pizzas",
         "Descripcion": "Pizza de muzarela",
-        "Precio": 950.99,
+        "Precio": "$" + 950,
         "Foto": "./img/dish-4.png",
         "Categoria": "Plato principal"
     },
@@ -56,15 +68,15 @@ const productos = [
         "Id": 6,
         "Nombre": "Postres",
         "Descripcion": "Galletitas rellena de chocolate",
-        "Precio": 715.99,
+        "Precio": "$" + 715,
         "Foto": "./img/dish-5.png",
         "Categoria": "Postre"
     },
     {
         "Id": 7,
         "Nombre": "Pollo Frito",
-        "Descripcion": "La mejor pieza de pollo frito y crocante",
-        "Precio": 850.99,
+        "Descripcion": "Pollo frito y crocante",
+        "Precio": "$" + 850,
         "Foto": "./img/dish-6.png",
         "Categoria": "Minutas"
     },
@@ -72,15 +84,15 @@ const productos = [
         "Id": 8,
         "Nombre": "Pizzas Especiales",
         "Descripcion": "Pizza con longaniza",
-        "Precio": 812.99,
+        "Precio": "$" + 812,
         "Foto": "./img/menu-1.jpg",
         "Categoria": "Platos Principal"
     },
     {
         "Id": 9,
-        "Nombre": "Especial Hanburgesas",
+        "Nombre": "Especial Hamburgesas",
         "Descripcion": "Tiene tomate, lechuga y pepino",
-        "Precio": 300,
+        "Precio": "$" + 800,
         "Foto": "./img/menu-2.jpg",
         "Categoria": "Minutas"
     },
@@ -88,15 +100,15 @@ const productos = [
         "Id": 10,
         "Nombre": "Panqueques",
         "Descripcion": "Panqueque con dulce de leche",
-        "Precio": 910.99,
+        "Precio": "$" + 910,
         "Foto": "./img/menu-3.jpg",
         "Categoria": "Postres"
     },
     {
         "Id": 11,
         "Nombre": "Helado Especial",
-        "Descripcion": "Una bocha de Helado arriba de un galletita",
-        "Precio": 612.99,
+        "Descripcion": "Una bocha de Helado ",
+        "Precio": "$" + 612,
         "Foto": "./img/menu-4.jpg",
         "Categoria": "Postres"
     },
@@ -104,15 +116,15 @@ const productos = [
         "Id": 12,
         "Nombre": "Torta de frutos rojos",
         "Descripcion": "Deliciosa torta de frutos rojos",
-        "Precio": 550.99,
+        "Precio":"$" + 550,
         "Foto": "./img/menu-5.jpg",
         "Categoria": "Postres"
     },
     {
         "Id": 13,
-        "Nombre": "Mix de frutos y cereales",
-        "Descripcion": "Un riquisimo mix natural",
-        "Precio": 812.99,
+        "Nombre": "Mix de frutos ",
+        "Descripcion": "Un mix natural",
+        "Precio":"$" + 812,
         "Foto": "./img/menu-8.jpg",
         "Categoria": "Postres"
     },
@@ -120,13 +132,94 @@ const productos = [
         "Id": 14,
         "Nombre": "Jugos",
         "Descripcion": "Una riquisima bariedad de jugos ",
-        "Precio": 512.99,
+        "Precio":"$" + 512,
         "Foto": "./img/menu-7.jpg",
         "Categoria": "Bebidas"
-    }
+    },
+    {
+        "Id": 15,
+        "Nombre": "Pastas",
+        "Descripcion": "Riquisimas pastas casera ",
+        "Precio": "$" + 1500,
+        "Foto": "./img/home-img-1.png",
+        "Categoria": "Pastas"
+    }   
     
 ]
 
+
+
+
+
+
+
+
+
+document.addEventListener(`DOMContentLoaded`, async () =>{
+    renderCard(productos)
+})
+
+const renderCard = productos => {
+    let productosPanelVista = ''
+    productos.forEach(productos => {
+        {
+            productosPanelVista += `
+            
+            <div class="col-12 mb-2 col-md-4 col-sm-4 ">
+                <section class="menu" id="menu">
+                    <div class="box-container">
+                        <div class="content card ">
+                            
+                            <div class=" box content card-body ">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <div class="image">
+                                    <img id="fotoProducto" src="${productos.Foto}" class=" validate card-img-top">
+                                    <a href="#" class="fas fa-heart image"></a>
+                                </div>
+                                <h3 id="tituloProducto" class="validate">${productos.Nombre}</h3>
+                                <p id="discripcionProducto" class="validate">${productos.Descripcion}</p>
+                                <p id="precioProducto" class="validate"> <span class="price">${productos.Precio}</span></p>
+                                <input type="button"  id="btnGuardar ${productos.id}"  class="btn " value="Guardar">
+                            </div>
+                        </div>
+                    </div>    
+                </section>
+                            
+                
+                
+
+            </div>
+            
+           
+
+           `
+
+        }
+        document.getElementById('productos').innerHTML = productosPanelVista
+    });
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 function ingresarDatos(mensaje){
     return prompt(mensaje)
 }
@@ -217,118 +310,21 @@ while(pagos !== "salir"){
 }    
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-function ingresarDatos(mensaje){
-    return prompt(mensaje)
-}
-
-function saludar(nombre){
-    alert("Hola " + nombre)
-}
-
-let nombre = ingresarDatos("Ingrese su nombre");
-
-saludar(nombre)
-let resu = 0;
-
-function Ploducto(plato, precio){
-    this.plato = plato;
-    this.precio = precio;
-}
-
-
-const platos = new Producto("hanburgesa", 850.99)
-
-
-function calcularIva(valor){
-    console.log("El total con IVA es: $" + valor * 1.21);
-}  
-
-let plato = parseInt(ingresarDatos("\t ---Ingrese el plato deceado--- \n 0)-SALIR \n 1)- HANBUERGESAS $850.99. \n 2)- SNACK $750.99 . \n 3)- AVES $1500.99 .\n 4)- PIZZAS $950.99. \n 5)- POSTRES $715.99 \n 6)- POLLO FRITO $850.99 \n "));
-while(plato !=0){
-    switch(plato){
-        case 1:
-            
-            calcularIva(850.99)
-            break;
-        case 2:
-            calcularIva(750.99);
-            
-            break;
-        case 3:
-            calcularIva(1500.99);
-            
-            break; 
-        case 4:
-            calcularIva(950.99);
-            break;
-        case 5:
-            calcularIva(715.99);
-            break;
-        case 6:
-            calcularIva(850.99);
-            break;
-        default:
-            alert("Igreso incorrecto" );
-            break;
-        
-                    
-    }
-
-    let fpago = parseInt(ingresarDatos("\t ---FORMAS DE PAGO--- \n 1)- TARJETA DE CREDITO.  \n 2)- MECADO PAGO.\n 3)- DEVITO."));
-        
-
-    switch(fpago){
-        case 1:
-            alert("Su pago fue procesado correctamente");
-            break;
-        case 2:
-            alert("Su pago fue procesado correctamente");
-            break;
-        case 3:
-            alert("Su pago fue procesado correctamente");
-            break; 
-    
-        default:
-            alert("Igreso incorrecto" );
-            break;
-        
-                    
-    }
-    if(fpago < 1 || fpago > 4) {
-        prompt("\t ---FORMAS DE PAGO--- \n 0)-SALIR \n 1)- TARJETA DE CREDITO. \n 2)-DEVITO. \n 3)- MECADO PAGO.\n ");
-        alert("Su pago fue procesado correctamente")
-    }
-
-
-    plato = parseInt(ingresarDatos("\t ---Ingrese el plato deceado--- \n 0)-SALIR \n 1)- HANBUERGESAS $850.99. \n 2)- SNACK $750.99 . \n 3)- AVES $1500.99 .\n 4)- PIZZAS $950.99. \n 5)- POSTRES $715.99 \n 6)- POLLO FRITO $850.99 \n "));
-}    
-
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

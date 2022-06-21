@@ -12,12 +12,16 @@
 
    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
-    
     <link rel="stylesheet" href="./css/style.css">
 
 </head>
-<body>
+
     
 
 
@@ -36,7 +40,72 @@
         <i class="fas fa-bars" id="menu-bars"></i>
         <i class="fas fa-search" id="search-icon"></i>
         <a href="#" class="fas fa-heart"></a>
-        <a href="#" class="fas fa-shopping-cart"></a>
+        <a href="#" class="fas fa-shopping-cart"><span class="numer">0</span></a>
+
+
+        <div class="table" id="carrito">
+            <table id="carrito"  class="table" >
+                <thead>
+                    <tr>
+                        <td>Imagen</td>
+                        <td class="table-active">Plato</td>
+                        <td>Descripcion</td>
+                        <td class="table-active">Precio</td>
+                    </tr>
+                    </thead>
+                    <tbody >
+                    <tr >
+                    
+                        
+                        <th scope="row">  
+        
+                            <div class="cont">
+                                <p id="contador" >0</p>
+                                <img src= "./img/dish-1.png" alt="foto" width="50">
+    
+                                <div class="direc">
+                                    <button id="aumentar" class="mas">+</button>
+                                    <button id="disminuir" class="menos">-</button>
+    
+                                </div>
+                                    
+    
+    
+                            </div>
+                                 
+                           
+                                
+                            
+                           
+                        </th>
+                        <td  class="table-active">Hamburgesas</td>
+                        <td>Hambuegesa con queso y panceta</td>
+                        <td  class="table-active">$850</td>
+                        
+                        <td><a href="#" class="x">x</a></td>
+        
+                    </tr>
+                    
+                    <tr>
+                        <th class="table-active" scope="row">TOTAL</th>
+                        <td  class="table-active"></td>
+                        <td class="table-active"></td>
+                        <td  class="table-active">$ 850</td>
+                        
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td> <button class="btn">Aceptar</button></td>
+                        <td><button class="btn">Borrar</button></td>
+                        <td></td>
+                        
+                    
+                    </tr>
+                </tbody>
+                    
+               
+            </table>
+        </div>
     </div>
 
 </header>
@@ -44,208 +113,115 @@
 
 
 <form action="" id="search-form">
-    <input type="search" placeholder="search here..." name="" id="search-box">
+    <input type="search" placeholder="Buscar....." name="" id="search-box">
     <label for="search-box" class="fas fa-search"></label>
     <i class="fas fa-times" id="close"></i>
 </form>
 
 
-<!--Inicio--> 
-<div class="scroller home"  id="inicio">
-    <div class="scroller-item">
-        <img src="./img/home-img-1.png" alt="">
-        <a href="#" class="letras">pastas</a>        
-    </div>
-    <div class="scroller-item">
-        <img src="./img/home-img-2.png" alt="">
-        <a href="#" class="letras">aves</a>
-    </div>
-    <div class="scroller-item">
-        <img src="./img/home-img-3.png" alt="">
-        <a href="#" class="letras">pizzas</a>
-    </div>
-    <div class="scroller-item">
-        <img src="./img/dish-1.png" alt="">
-        <a href="#" class="letras">hanburgesas</a>
-    </div>
-    <div class="scroller-item">
-        <img src="./img/dish-2.png" alt="">
-        <a href="#" class="letras">snack</a>
-    </div>
-    <div class="scroller-item">
-        <img src="./img/dish-3.png" alt="">
-        <a href="#" class="letras">especialidades</a>
-    </div>
-    <div class="scroller-item">
-        <img src="./img/dish-4.png" alt="">
-        <a href="#" class="letras">pizzas esp.</a>
-    </div>
-    <div class="scroller-item">
-        <img src="./img/dish-5.png" alt="">
-        <a href="#" class="letras">dulces</a>
-    </div>
-    <div class="scroller-item">
-        <img src="./img/dish-6.png" alt="">
-        <a href="#" class="letras">pollo frito</a>
-    </div>
-    <div class="scroller-item">
-        <img src="./img/about-img.png" alt="">
-        <a href="#" class="letras">tapas</a>
-    </div>
-    <div class="scroller-item">
-        <img src="./img/menu-1.jpg" alt="">
-        <a href="#" class="letras">pizzas</a>
-    </div>
-    <div class="scroller-item">
-        <img src="./img/menu-2.jpg" alt="">
-        <a href="#" class="letras">hamburgesas</a>
-    </div>
-    <div class="scroller-item">
-        <img src="./img/menu-3.jpg" alt="">
-        <a href="#" class="letras">postres</a>
-    </div>
-    <div class="scroller-item">
-        <img src="./img/menu-4.jpg" alt="">
-        <a href="#" class="letras">postres</a>
-    </div>
-    <div class="scroller-item">
-        <img src="./img/menu-5.jpg" alt="">
-        <a href="#" class="letras">postres</a>
-    </div>
-    <div class="scroller-item">
-        <img src="./img/menu-6.jpg" alt="">
-        <a href="#" class="letras">postres</a>
-    </div>
-    <div class="scroller-item">
-        <img src="./img/menu-7.jpg" alt="">
-        <a href="#" class="letras">jugos</a>
-    </div>
-    <div class="scroller-item">
-        <img src="./img/menu-8.jpg" alt="">
-        <a href="#" class="letras">frutas</a>
-    </div>
-    <div class="scroller-item">
-        <img src="./img/menu-9.jpg" alt="">
-        <a href="#" class="letras">bebidas</a>
-    </div>
-</div>
 
-
-
-
-
-
-
-
-
-<!-- Platos  -->
-
-<section class="dishes" id="platos">
-
-    <h3 class="sub-heading"> nuestros platos </h3>
-    <h1 class="heading"> platos </h1>
-
-    <div class="box-container">
-
-        <div class="box">
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a>
+<body>
+        
+    <!--Inicio--> 
+    <div class="scroller home"  id="inicio">
+        <div class="scroller-item">
+            <img src="./img/home-img-1.png" alt="">
+            <a href="#" class="letras">pastas</a>        
+        </div>
+        <div class="scroller-item">
+            <img src="./img/home-img-2.png" alt="">
+            <a href="#" class="letras">aves</a>
+        </div>
+        <div class="scroller-item">
+            <img src="./img/home-img-3.png" alt="">
+            <a href="#" class="letras">pizzas</a>
+        </div>
+        <div class="scroller-item">
             <img src="./img/dish-1.png" alt="">
-            <h3>hamburgesas</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <span>$850.99</span>
-            <a href="#" class="btn">agregar</a>
+            <a href="#" class="letras">hanburgesas</a>
         </div>
-
-        <div class="box">
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a>
+        <div class="scroller-item">
             <img src="./img/dish-2.png" alt="">
-            <h3>snack</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <span>$750.99</span>
-            <a href="#" class="btn">agregar</a>
+            <a href="#" class="letras">snack</a>
         </div>
-
-        <div class="box">
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a>
+        <div class="scroller-item">
             <img src="./img/dish-3.png" alt="">
-            <h3>aves</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <span>$1500.99</span>
-            <a href="#" class="btn">agregar</a>
+            <a href="#" class="letras">especialidades</a>
         </div>
-
-        <div class="box">
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a>
+        <div class="scroller-item">
             <img src="./img/dish-4.png" alt="">
-            <h3>pizzas</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <span>$950.99</span>
-            <a href="#" class="btn">agregar</a>
+            <a href="#" class="letras">pizzas esp.</a>
         </div>
-
-        <div class="box">
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a>
+        <div class="scroller-item">
             <img src="./img/dish-5.png" alt="">
-            <h3>postres</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <span>$715.99</span>
-            <a href="#" class="btn">agregar</a>
+            <a href="#" class="letras">dulces</a>
         </div>
-
-        <div class="box">
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a>
+        <div class="scroller-item">
             <img src="./img/dish-6.png" alt="">
-            <h3>pollo frito</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <span>$850.99</span>
-            <a href="#" class="btn">agregar</a>
+            <a href="#" class="letras">pollo frito</a>
         </div>
+        <div class="scroller-item">
+            <img src="./img/about-img.png" alt="">
+            <a href="#" class="letras">tapas</a>
+        </div>
+        <div class="scroller-item">
+            <img src="./img/menu-1.jpg" alt="">
+            <a href="#" class="letras">pizzas</a>
+        </div>
+        <div class="scroller-item">
+            <img src="./img/menu-2.jpg" alt="">
+            <a href="#" class="letras">hamburgesas</a>
+        </div>
+        <div class="scroller-item">
+            <img src="./img/menu-3.jpg" alt="">
+            <a href="#" class="letras">postres</a>
+        </div>
+        <div class="scroller-item">
+            <img src="./img/menu-4.jpg" alt="">
+            <a href="#" class="letras">postres</a>
+        </div>
+        <div class="scroller-item">
+            <img src="./img/menu-5.jpg" alt="">
+            <a href="#" class="letras">postres</a>
+        </div>
+        <div class="scroller-item">
+            <img src="./img/menu-6.jpg" alt="">
+            <a href="#" class="letras">postres</a>
+        </div>
+        <div class="scroller-item">
+            <img src="./img/menu-7.jpg" alt="">
+            <a href="#" class="letras">jugos</a>
+        </div>
+        <div class="scroller-item">
+            <img src="./img/menu-8.jpg" alt="">
+            <a href="#" class="letras">frutas</a>
+        </div>
+        <div class="scroller-item">
+            <img src="./img/menu-9.jpg" alt="">
+            <a href="#" class="letras">bebidas</a>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div id="panel" class="container my-5 text-center">
+        <div class="titulo">
+            <h3 class="sub-heading"> nuestros platos </h3>
+            <h2>Platos </h2>
+            <div class="row" id="productos">
+                
+            </div>
+
+        </div>
+            
+       
 
     </div>
 
-</section>
 
 
 
@@ -253,260 +229,65 @@
 
 
 
-<!-- menu   -->
 
-<section class="menu" id="menu">
+    <!-- ordenar  -->
 
-    <h3 class="sub-heading"> nuestro menu </h3>
-    <h1 class="heading"> especialidad del día </h1>
+    <section class="order" id="ordenar">
 
-    <div class="box-container">
+        <h3 class="sub-heading"> pedi tu orden</h3>
+        <h1 class="heading"> rapido y sencillo </h1>
 
-        <div class="box">
-            <div class="image">
-                <img src="./img/menu-1.jpg" alt="">
-                <a href="#" class="fas fa-heart"></a>
-            </div>
-            <div class="content">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
+        <form action="">
+
+            <div class="inputBox">
+                <div class="input">
+                    <span>tu direccion</span>
+                    <input type="text" placeholder="escriba tu nombre">
                 </div>
-                <h3>delicious food</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
-                <a href="#" class="btn">agregar</a>
-                <span class="price">$812.99</span>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <img src="./img/menu-2.jpg" alt="">
-                <a href="#" class="fas fa-heart"></a>
-            </div>
-            <div class="content">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
+                <div class="input">
+                    <span> numero</span>
+                    <input type="number" placeholder="escriba el numero">
                 </div>
-                <h3>delicious food</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
-                <a href="#" class="btn">agregar</a>
-                <span class="price">$712.99</span>
             </div>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <img src="./img/menu-3.jpg" alt="">
-                <a href="#" class="fas fa-heart"></a>
-            </div>
-            <div class="content">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
+            <div class="inputBox">
+                <div class="input">
+                    <span>tu orden</span>
+                    <input type="text" placeholder="escriba tu orden">
                 </div>
-                <h3>delicious food</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
-                <a href="#" class="btn">agregar</a>
-                <span class="price">$912.99</span>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <img src="./img/menu-4.jpg" alt="">
-                <a href="#" class="fas fa-heart"></a>
-            </div>
-            <div class="content">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
+                <div class="input">
+                    <span>cuanto</span>
+                    <input type="number" placeholder="cuantas ordenes">
                 </div>
-                <h3>delicious food</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
-                <a href="#" class="btn">agregar</a>
-                <span class="price">$612.99</span>
+            
             </div>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <img src="./img/menu-5.jpg" alt="">
-                <a href="#" class="fas fa-heart"></a>
-            </div>
-            <div class="content">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
+            <div class="inputBox">
+                <div class="input">
+                    <span>telefono</span>
+                    <input type="test" placeholder="escribi aquí tu telefono">
                 </div>
-                <h3>delicious food</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
-                <a href="#" class="btn">agregar</a>
-                <span class="price">$550.99</span>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <img src="./img/menu-6.jpg" alt="">
-                <a href="#" class="fas fa-heart"></a>
-            </div>
-            <div class="content">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
+                <div class="input">
+                    <span>detalles del tiempo requerido</span>
+                    <input type="detalles del tiempo de espera">
                 </div>
-                <h3>delicious food</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
-                <a href="#" class="btn">agregar</a>
-                <span class="price">$812.99</span>
             </div>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <img src="./img/menu-7.jpg" alt="">
-                <a href="#" class="fas fa-heart"></a>
-            </div>
-            <div class="content">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
+            <div class="inputBox">
+                <div class="input">
+                    <span>detalles de tu direccion</span>
+                    <textarea name="" placeholder="escriba su dirección" id="" cols="30" rows="10"></textarea>
                 </div>
-                <h3>delicious food</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
-                <a href="#" class="btn">agregar</a>
-                <span class="price">$512.99</span>
-            </div>
-        </div>
-
-        <div class="box">
-            <div class="image">
-                <img src="./img/menu-8.jpg" alt="">
-                <a href="#" class="fas fa-heart"></a>
-            </div>
-            <div class="content">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
+                <div class="input">
+                    <span>escriba un mensaje</span>
+                    <textarea name="" placeholder="escriba un mensaje" id="" cols="30" rows="10"></textarea>
                 </div>
-                <h3>delicious food</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
-                <a href="#" class="btn">agregar</a>
-                <span class="price">$812.99</span>
             </div>
-        </div>
 
-        <div class="box">
-            <div class="image">
-                <img src="./img/menu-9.jpg" alt="">
-                <a href="#" class="fas fa-heart"></a>
-            </div>
-            <div class="content">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <h3>delicious food</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p>
-                <a href="#" class="btn">agregar</a>
-                <span class="price">$712.99</span>
-            </div>
-        </div>
+            <input type="submit" value="ordenar ahora" class="btn">
 
-    </div>
+        </form>
 
-</section>
+    </section>
 
-
-
-
-
-<!-- ordenar  -->
-
-<section class="order" id="ordenar">
-
-    <h3 class="sub-heading"> pedi tu orden</h3>
-    <h1 class="heading"> rapido y sencillo </h1>
-
-    <form action="">
-
-        <div class="inputBox">
-            <div class="input">
-                <span>tu direccion</span>
-                <input type="text" placeholder="escriba tu nombre">
-            </div>
-            <div class="input">
-                <span> numero</span>
-                <input type="number" placeholder="escriba el numero">
-            </div>
-        </div>
-        <div class="inputBox">
-            <div class="input">
-                <span>tu orden</span>
-                <input type="text" placeholder="escriba tu orden">
-            </div>
-            <div class="input">
-                <span>cuanto</span>
-                <input type="number" placeholder="cuantas ordenes">
-            </div>
-           
-        </div>
-        <div class="inputBox">
-            <div class="input">
-                <span>telefono</span>
-                <input type="test" placeholder="escribi aquí tu telefono">
-            </div>
-            <div class="input">
-                <span>detalles del tiempo requerido</span>
-                <input type="detalles del tiempo de espera">
-            </div>
-        </div>
-        <div class="inputBox">
-            <div class="input">
-                <span>detalles de tu direccion</span>
-                <textarea name="" placeholder="escriba su dirección" id="" cols="30" rows="10"></textarea>
-            </div>
-            <div class="input">
-                <span>escriba un mensaje</span>
-                <textarea name="" placeholder="escriba un mensaje" id="" cols="30" rows="10"></textarea>
-            </div>
-        </div>
-
-        <input type="submit" value="ordenar ahora" class="btn">
-
-    </form>
-
-</section>
-
+</body>
 
 
 <!-- footer  -->
@@ -558,6 +339,9 @@
 </section>
 
 
+
+
+
 <div class="loader-container">
     <img src="./img/loader.gif" alt="">
 </div>
@@ -581,12 +365,16 @@
 
 
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 <!-- custom js file link  -->
+
+
 <script src="./js/simulador.js"></script>
+<script src="./js/carrito.js"></script>
 <script src="./js/main.js"></script>
+
 
 </body>
 </html>
