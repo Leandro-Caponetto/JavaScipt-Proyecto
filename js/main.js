@@ -1,91 +1,96 @@
-let menu = document.querySelector('#menu-bars');
-let navbar = document.querySelector('.navbar');
+import { loadProducts } from './Productos.js'
+import { add_Product } from './Carrito.js'
+const divisa = "$"
 
-menu.onclick = () =>{
-  menu.classList.toggle('fa-times');
-  navbar.classList.toggle('active');
+//Evento que sucede cuando se carga el DOM. Se recupera la totalidad de productos en el JSON productos y se envia la informacion a la funcion renderCard.
+$(document).ready(async () => {
+  try {
+    const data = await loadProducts()
+    renderCard(data)
+  } catch (err) {
+    console.error("la pagina no se cargo correctamente", err)
+  }
+})
+
+//Por cada producto(objeto) en el archivo JSON, dibuja la tarjeta con los datos del objeto producto.
+export const renderCard = (data) => {
+  $('#productos').html('')
+  try {
+    let detalleProductos = ''
+    $.each(data, (index, producto) => {
+      detalleProductos += `
+      <div class="col-12 mb-2 col-md-4 col-sm-4 ">
+            <div class="card">
+                <div class="card-body">
+                    <img id="fotoProducto" src="${producto.Foto}" class="card-img-top">
+                    <h5 id="tituloProducto">${producto.Nombre}</h5>
+                    <p id="descripcionProducto">${producto.Descripcion}</p>
+                    <p id="precioProducto">${divisa}${producto.Precio}</p>
+                    <button data-id="${producto.Id}" id="mybtn" name="btnComprar" class="btn btn-success">Comprar</button>
+                </div>
+              </div>
+        </div>
+                `})
+
+    $('#productos').html(detalleProductos)
+  } catch (err) {
+    console.error("No se ha logrado renderizar correctamente la lista de productos", err)
+  }
 }
 
-let section = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header .navbar a');
+//Al detectar el evento, envio al carrito la informacion del producto seleccionado.
+$('#productos').on('click', e => {
+  try {
+    $('.btn-success').has(e.target) && add_Product(e.target.parentElement);
+    flyToElement($(e.target.parentElement).find('#fotoProducto'), $('#carrito'))   
+    e.stopPropagation()
+  } catch (err) {
+    console.error("Es posible que el boton no funcione correctamente", err)
+  }
+})
 
-window.onscroll = () =>{
+//Movimiento de slider de filtro de precio Min
+$('#sliderMin').on('input', function () {
+  $('#slider_valueMin').html($(this).val());
+});
 
-  menu.classList.remove('fa-times');
-  navbar.classList.remove('active');
+//Movimiento de slider de filtro de precio Max
+$('#sliderMax').on('input', function () {
+  $('#slider_valueMax').html($(this).val());
+});
 
-  section.forEach(sec =>{
+//Ingresan 2 parametros. La imagen y el lugar de destino
+const flyToElement = (flyer, flyingTo) => {
+  const divider = 5;
+  const flyerClone = $(flyer).clone();
+  //Se setean propiedades de la imagen del producto a "volar"
+  $(flyerClone).css({ position: 'absolute', width: '50px', height: 'auto', top: $(flyer).offset().top + "px", left: $(flyer).offset().left + "px", opacity: 1, 'z-index': 1000 });
+  $('body').append($(flyerClone));
+  const gotoX = $(flyingTo).offset().left + ($(flyingTo).width() / 2) - ($(flyer).width() / divider) / 2;
+  const gotoY = $(flyingTo).offset().top + ($(flyingTo).height() / 2) - ($(flyer).height() / divider) / 2;
 
-    let top = window.scrollY;
-    let height = sec.offsetHeight;
-    let offset = sec.offsetTop - 150;
-    let id = sec.getAttribute('id');
-
-    if(top >= offset && top < offset + height){
-      navLinks.forEach(links =>{
-        links.classList.remove('active');
-        document.querySelector('header .navbar a[href*='+id+']').classList.add('active');
+  //Se da animacion a la imagen seteada anteriormente
+  $(flyerClone).animate({
+    opacity: 0.5,
+    left: gotoX,
+    top: gotoY,
+  }, 700,
+    function () {
+      $(flyingTo).fadeOut('fast', function () {
+        $(flyingTo).fadeIn('fast', function () {
+          $(flyerClone).fadeOut('fast', function () {
+            $(flyerClone).remove();
+          });
+        });
       });
-    };
-
-  });
-
+    });
 }
 
-document.querySelector('#search-icon').onclick = () =>{
-  document.querySelector('#search-form').classList.toggle('active');
-}
-
-document.querySelector('#close').onclick = () =>{
-  document.querySelector('#search-form').classList.remove('active');
-}
-
-let swiper = new Swiper(".home-slider", {
-  spaceBetween: 30,
-  centeredSlides: true,
-  autoplay: {
-    delay: 7500,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  loop:true,
+//Al realizar scroll se modifica propiedad de header, para que pase a ser movil
+$(window).scroll(function () {
+  if ($(window).scrollTop() > 200) {
+    $('#header').addClass('sticky');
+  } else {
+    $('#header').removeClass('sticky');
+  }
 });
-
-swiper = new Swiper(".review-slider", {
-  spaceBetween: 20,
-  centeredSlides: true,
-  autoplay: {
-    delay: 7500,
-    disableOnInteraction: false,
-  },
-  loop:true,
-  breakpoints: {
-    0: {
-        slidesPerView: 1,
-    },
-    640: {
-      slidesPerView: 2,
-    },
-    768: {
-      slidesPerView: 2,
-    },
-    1024: {
-      slidesPerView: 3,
-    },
-  },
-});
-
-function loader(){
-  document.querySelector('.loader-container').classList.add('fade-out');
-}
-
-function fadeOut(){
-  setInterval(loader, 3000);
-}
-
-window.onload = fadeOut;
-
-

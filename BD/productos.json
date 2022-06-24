@@ -1,0 +1,123 @@
+[
+    {
+        "Id": 1,
+        "Nombre": "Jugo Esprimido",
+        "Descripcion": "Deliciosas frutas esprimida",
+        "Precio": 850,
+        "Foto": "./img/menu-9.jpg",
+        "Categoria": "Bebidas"
+    },
+    {
+        "Id": 2,
+        "Nombre": "Haburgesas",
+        "Descripcion": " Hambuegesa con queso y panceta",
+        "Precio": 850,
+        "Foto": "./img/dish-1.png",
+        "Categoria": "Minutas"
+    },
+    {
+        "Id": 3,
+        "Nombre": "Snack",
+        "Descripcion": "Pollo rebosado y frito",
+        "Precio":   750,
+        "Foto": "./img/dish-2.png",
+        "Categoria": "Minutas"
+    },
+    {
+        "Id": 4,
+        "Nombre": "Aves",
+        "Descripcion": "Pollo al horno",
+        "Precio": 1500,
+        "Foto": "./img/dish-3.png",
+        "Categoria": "Plato principal"
+    },
+    {
+        "Id": 5,
+        "Nombre": "Pizzas",
+        "Descripcion": "Pizza de muzarela",
+        "Precio": 950,
+        "Foto": "./img/dish-4.png",
+        "Categoria": "Plato principal"
+    },
+    {
+        "Id": 6,
+        "Nombre": "Postres",
+        "Descripcion": "Galletitas rellena de chocolate",
+        "Precio":  715,
+        "Foto": "./img/dish-5.png",
+        "Categoria": "Postre"
+    },
+    {
+        "Id": 7,
+        "Nombre": "Pollo Frito",
+        "Descripcion": "Pollo frito y crocante",
+        "Precio":  850,
+        "Foto": "./img/dish-6.png",
+        "Categoria": "Minutas"
+    },
+    {
+        "Id": 8,
+        "Nombre": "Pizzas Especiales",
+        "Descripcion": "Pizza con longaniza",
+        "Precio":  812,
+        "Foto": "./img/menu-1.jpg",
+        "Categoria": "Platos Principal"
+    },
+    {
+        "Id": 9,
+        "Nombre": "Especial Hamburgesas",
+        "Descripcion": "Tiene tomate, lechuga y pepino",
+        "Precio": 800,
+        "Foto": "./img/menu-2.jpg",
+        "Categoria": "Minutas"
+    },
+    {
+        "Id": 10,
+        "Nombre": "Panqueques",
+        "Descripcion": "Panqueque con dulce de leche",
+        "Precio": 910,
+        "Foto": "./img/menu-3.jpg",
+        "Categoria": "Postres"
+    },
+    {
+        "Id": 11,
+        "Nombre": "Helado Especial",
+        "Descripcion": "Una bocha de Helado ",
+        "Precio": 612,
+        "Foto": "./img/menu-4.jpg",
+        "Categoria": "Postres"
+    },
+    {
+        "Id": 12,
+        "Nombre": "Torta de frutos rojos",
+        "Descripcion": "Deliciosa torta de frutos rojos",
+        "Precio":550,
+        "Foto": "./img/menu-5.jpg",
+        "Categoria": "Postres"
+    },
+    {
+        "Id": 13,
+        "Nombre": "Mix de frutos ",
+        "Descripcion": "Un mix natural",
+        "Precio":812,
+        "Foto": "./img/menu-8.jpg",
+        "Categoria": "Postres"
+    },
+    {
+        "Id": 14,
+        "Nombre": "Jugos",
+        "Descripcion": "Una riquisima bariedad de jugos ",
+        "Precio":512,
+        "Foto": "./img/menu-7.jpg",
+        "Categoria": "Bebidas"
+    },
+    {
+        "Id": 15,
+        "Nombre": "Pastas",
+        "Descripcion": "Riquisimas pastas casera ",
+        "Precio": 1500,
+        "Foto": "./img/home-img-1.png",
+        "Categoria": "Pastas"
+    }   
+    
+]
