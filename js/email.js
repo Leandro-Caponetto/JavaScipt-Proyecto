@@ -19,7 +19,7 @@ export const enviarMail = (Orden) => {
       total: `$${precioTotal}`,
       cantidad: `${cantidadProductosTotal}`,
       to_name: `${$('#inputEmail').val()}`,
-      from_name: "Japoneando",
+      from_name: "Peppes restorante",
       imagen:  `<img src=https://drive.google.com/uc?export=donwload&id=1vtGNg8p-lAMut2ckEDXJF9Orp-mFSCXz style="width: 450px; height: 100px; margin-left: 20px"></img>`
       })
     .then(function(response) {

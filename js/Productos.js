@@ -84,9 +84,9 @@ const filtroProductos = async () => {
         const precioMenor = $('#slider_valueMin').text()
         const precioMayor = $('#slider_valueMax').text()  
         $('.Comidas').is(':checked') && (opcion = $('.Comidas').val()) && ($('#titulo_productos').html(`<h2>Plato principal:</h>`))
-        $('.utensillosCocina').is(':checked') && (opcion = $('.utensillosCocina').val()) && ($('#titulo_productos').html(`<h2>Minutas</h>`))
+        $('.minutas').is(':checked') && (opcion = $('.minutas').val()) && ($('#titulo_productos').html(`<h2>Minutas</h>`))
         $('.bebidas').is(':checked') && (opcion = $('.bebidas').val()) && ($('#titulo_productos').html(`<h2>Bebidas:</h>`))
-        $('.golosinas').is(':checked') && (opcion = $('.golosinas').val()) && ($('#titulo_productos').html(`<h2>Postres:</h>`))
+        $('.postres').is(':checked') && (opcion = $('.postres').val()) && ($('#titulo_productos').html(`<h2>Postres:</h>`))
         
         //Si existe ya un filtro aplicado por precio del producto, el texto del boton habra cambiado a "Eliminar Filtro"
         //Para este caso se filtra sobre ese precio en la categoria seleccionada

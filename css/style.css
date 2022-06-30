@@ -25,7 +25,9 @@ html{
     scroll-padding-top: 5.5rem;
     scroll-behavior: smooth;
 }
-
+body{
+    background-image: url(../img/Restaurantes_Comida_Internacional.webp);
+}
 .contador {
     display: flex;
     width: 1.5vw;
@@ -45,15 +47,40 @@ html{
 
 header {
     width: 100%;
-    background-color: #27ae60;
+    background-image: url(../img/Restaurantes_Comida_Internacional.webp);
+    
     display: flex;
     height: 15%;
     z-index: 10001;
+   
+    border-radius: 10px;
 }
+.papel {
+    background-image: url(../img/papel.gif);
+    
+}
+.carritoCompras:hover{
+    cursor: pointer;
+}
+header .prepp{
+    font-size: 60px;
+    color: rgba(255, 0, 0, 0.979);
+    font-family: 'Smooch', cursive;
+    text-shadow: 0 5px 5px rgba(255, 255, 255, 0.548) ;
+    -webkit-text-stroke: 1px rgba(12, 12, 12, 0.973);
+}
+.peppers {
+    font-size: 40px;
+    color: red;
+    font-family: 'Smooch', cursive;
+    text-shadow: 0 5px 5px rgba(0, 0, 0, 0.4) ;
+}
+
+
 .sticky {
     position: fixed;
     top: 0;
-  }
+}
 
 
 .carritoProductos {
@@ -105,7 +132,8 @@ header a {
     margin: -0.7% 0 0 30%;
     font-family: "hollow";
     color: white;
-    font-size: 6rem;
+    font-size: 20px;
+    text-shadow: 0 5px 5px rgba(0, 0, 0, 0.4) ;
     padding-left: 1%;
     text-decoration: none;
     width: 100%;
@@ -120,11 +148,18 @@ header a img {
 nav {
     width: 100%;
     height: 100%;
-    background-color: #27ae60;
+    background-color: rgba(177, 240, 110, 0.733);
     margin: 0.5% auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.container-fluid {
+    border: 1px solid rgba(53, 52, 52, 0.18);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0,25);
+    box-shadow: 0 8px 32px rgba(54, 54, 54, 0.4);
+
 }
 
 .carritoCompras {
@@ -289,18 +324,34 @@ header a:hover {
 }
 
 #panel {
-    background-color: white;
+    background-color: rgba(177, 240, 110, 0.733);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    background-filter: blur(4px) ;
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    
     min-height: 40vw;
     height: auto;
 }
 
+#panel h2 {
+    color: #000;
+    text-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+    -webkit-text-stroke: 1px rgba(114, 112, 112, 0.5);
+}
+.card-body .card-img-top {
+    width: 100%;
+    height: auto;
+}
 
 #filtros {
     width: 18%;
     float: left;
     margin: 5vw 0 0 1vw;
-    border: black solid 1px;
+    
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    background-color: #e94444c5;
+    border-radius: 5px;
 }
 
 #filtro_Productos,
@@ -807,170 +858,29 @@ label {
 
 
 
-
-
-
-
-
-
-
-
-.box-container {
-    height: 25rem;
-    width: 50%;
-}
-
-
-
-.menu .box-container .box{
-    background: #fff;
-    border:.1rem solid rgba(0,0,0,.2);
-    border-radius: .5rem;
-    box-shadow: var(--box-shadow);    
-}
-
-.menu .box-container .box .image{
-    height: 25rem;
-    width: 50%;
+footer {
+    background-color: #e0e0e0;
     
-}
-.menu .box-container .box .image img{
-    height: auto;
-    width: 50%;
-    border-radius: .5rem;
-    object-fit: cover;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px -60px #ffffff;
 }
 
-
-
-.menu .box-container .box .image .fa-heart:hover{
-    background-color: var(--green);
-    color:#fff;
-}
-
-.menu .box-container .box .content{
-    padding:2rem;
-    padding-top: 0;
-}
-
-.menu .box-container .box  .stars{
-    padding-bottom: 1rem;
-}
-
-.menu .box-container .box  .stars i{
-   font-size: 1.7rem;
-   color:var(--green);
-}
-
-.menu .box-container .box  h3{
-    color:var(--black);
-    font-size: 2.5rem;
-}
-
-.menu .box-container .box  p{
-    color:var(--light-color);
-    font-size: 1.6rem;
-    padding:.5rem 0;
-    line-height: 1.5;
-}
-
-.menu .box-container .box .price{
-    color:var(--green);
-    margin-left: 1rem;
-    font-size: 2.5rem;
-}
-
-
-
-.order form{
-    max-width:90rem;
-    border-radius: .5rem;
-    box-shadow: var(--box-shadow);
-    border:.1rem solid rgba(0,0,0,.2);
-    background:#fff;
-    padding:1.5rem;
-    margin:0 auto;
-}
-
-.order form .inputBox{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.order form .inputBox .input{
-    width:49%;
-}
-
-.order form .inputBox .input span{
-    display:block;
-    padding:.5rem 0;
-    font-size: 1.5rem;
-    color:var(--light-color);
-}
-
-.order form .inputBox .input input,
-.order form .inputBox .input textarea{
-    background:#eee;
-    border-radius: .5rem;
-    padding:1rem;
-    font-size: 1.6rem;
-    color:var(--black);
-    text-transform: none;
-    margin-bottom: 1rem;
-    width:100%;
-}
-
-.order form .inputBox .input input:focus,
-.order form .inputBox .input textarea:focus{
-    border:.1rem solid var(--green);
-}
-
-.order form .inputBox .input textarea{
-    height:20rem;
-    resize: none;
-}
-
-.order form .btn{
-    margin-top: 0;
-}
-
-.footer .box-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    gap:1.5rem;
-}
-
-.footer .box-container .box h3{
-    padding:.5rem 0;
-    font-size: 2.5rem;
-    color:var(--black);
-}
-
-.footer .box-container .box a{
-    display: block;
-    padding:.5rem 0;
-    font-size: 1.5rem;
-    color:var(--light-color);
-}
-
-.footer .box-container .box a:hover{
-    color:var(--green);
-    text-decoration: underline;
-}
 
 .footer .credit{
     text-align: center;
     border-top: .1rem solid rgba(0,0,0,.1);
     font-size: 2rem;
-    color:var(--black);
+    color:#b6b6b6;
+    text-shadow: 0 5px 5px rgba(53, 53, 53, 0.329) ;
+    
     padding:.5rem;
     padding-top: 1.5rem;
     margin-top: 1.5rem;
 }
 
 .footer .credit span{
-    color:var(--green);
+    color:#9c6b6b;
+    text-shadow: 0 5px 5px rgba(48, 48, 48, 0.541) ;
+    
 }
 
 .loader-container{

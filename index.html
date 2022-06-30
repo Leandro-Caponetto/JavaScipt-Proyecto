@@ -15,7 +15,9 @@
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
         <!-- CSS only -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"></script>
-    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Smooch&display=swap" rel="stylesheet"> 
         
         
         <link rel="stylesheet" href="./css/style.css">
@@ -27,9 +29,10 @@
         <header id="header">
             
             <a id="nombrePagina" class="nombre" title="encabezado" href="index.html">
-                <img src="./img/home-img-1.png" alt="encabezado" />Restorante Peppers </a>
+                <img src="./img/peppers.png" alt="encabezado" /> <span class="prepp">Peppers</span> Restorante </a>
                 <div class="carritoCompras">
                     <span class="contador"></span>
+                    
                 </div>
         </header>
             <div id="panel" class="container my-5 text-center">
@@ -47,11 +50,11 @@
                                 <div class="linea"></div>
                                 <input type="radio" name="productos" class="Comidas" value="Plato principal">
                                 <label>Plato principal</label><br>
-                                <input type="radio" name="productos" class="utensillosCocina" value="Minutas">
+                                <input type="radio" name="productos" class="minutas" value="Minutas">
                                 <label>Minutas</label><br>
                                 <input type="radio" name="productos" class="bebidas" value="Bebidas">
                                 <label>Bebidas</label><br>
-                                <input type="radio" name="productos" class="golosinas" value="Postres">
+                                <input type="radio" name="productos" class="postres" value="Postres">
                                 <label>Postres</label>
                                 <button id="filtrar_Productos" class="verde">Aplicar Filtro</button>
                             </form>
@@ -93,66 +96,6 @@
             </table>
         </div>    
         
-        <section class="order" id="ordenar">
-    
-            <h3 class="sub-heading"> pedi tu orden</h3>
-            <h1 class="heading"> rapido y sencillo </h1>
-    
-            <form action="">
-    
-                <div class="inputBox">
-                    <div class="input">
-                        <span>tu direccion</span>
-                        <input type="text" placeholder="escriba tu nombre">
-                    </div>
-                    <div class="input">
-                        <span> numero</span>
-                        <input type="number" placeholder="escriba el numero">
-                    </div>
-                </div>
-                <div class="inputBox">
-                    <div class="input">
-                        <span>tu orden</span>
-                        <input type="text" placeholder="escriba tu orden">
-                    </div>
-                    <div class="input">
-                        <span>cuanto</span>
-                        <input type="number" placeholder="cuantas ordenes">
-                    </div>
-                
-                </div>
-                <div class="inputBox">
-                    <div class="input">
-                        <span>telefono</span>
-                        <input type="test" placeholder="escribi aquí tu telefono">
-                    </div>
-                    <div class="input">
-                        <span>detalles del tiempo requerido</span>
-                        <input type="detalles del tiempo de espera">
-                    </div>
-                </div>
-                <div class="inputBox">
-                    <div class="input">
-                        <span>detalles de tu direccion</span>
-                        <textarea name="" placeholder="escriba su dirección" id="" cols="30" rows="10"></textarea>
-                    </div>
-                    <div class="input">
-                        <span>escriba un mensaje</span>
-                        <textarea name="" placeholder="escriba un mensaje" id="" cols="30" rows="10"></textarea>
-                    </div>
-                </div>
-    
-                <input type="submit" value="ordenar ahora" class="btn">
-    
-            </form>
-    
-        </section>
-        
-       
-
-        
-
-
 
 
         <footer>
