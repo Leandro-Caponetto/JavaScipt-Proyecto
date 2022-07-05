@@ -83,8 +83,8 @@ const filtroProductos = async () => {
         // Las distintas categorias que engloban al producto
         const precioMenor = $('#slider_valueMin').text()
         const precioMayor = $('#slider_valueMax').text()  
-        $('.Comidas').is(':checked') && (opcion = $('.Comidas').val()) && ($('#titulo_productos').html(`<h2>Plato principal:</h>`))
-        $('.minutas').is(':checked') && (opcion = $('.minutas').val()) && ($('#titulo_productos').html(`<h2>Minutas</h>`))
+        $('.platoPrincipal').is(':checked') && (opcion = $('.platoPrincipal').val()) && ($('#titulo_productos').html(`<h2>Plato principal:</h>`))
+        $('.minutas').is(':checked') && (opcion = $('.minutas').val()) && ($('#titulo_productos').html(`<h2>Minutas:</h>`))
         $('.bebidas').is(':checked') && (opcion = $('.bebidas').val()) && ($('#titulo_productos').html(`<h2>Bebidas:</h>`))
         $('.postres').is(':checked') && (opcion = $('.postres').val()) && ($('#titulo_productos').html(`<h2>Postres:</h>`))
         

@@ -11,7 +11,7 @@
         "Id": 2,
         "Nombre": "Haburgesas",
         "Descripcion": " Hambuegesa con queso y panceta",
-        "Precio": 850,
+        "Precio": 1850,
         "Foto": "./img/dish-1.png",
         "Categoria": "Minutas"
     },
@@ -19,7 +19,7 @@
         "Id": 3,
         "Nombre": "Snack",
         "Descripcion": "Pollo rebosado y frito",
-        "Precio":   750,
+        "Precio":   1750,
         "Foto": "./img/dish-2.png",
         "Categoria": "Minutas"
     },
@@ -27,7 +27,7 @@
         "Id": 4,
         "Nombre": "Aves",
         "Descripcion": "Pollo al horno",
-        "Precio": 1500,
+        "Precio": 2500,
         "Foto": "./img/dish-3.png",
         "Categoria": "Plato principal"
     },
@@ -35,7 +35,7 @@
         "Id": 5,
         "Nombre": "Pizzas",
         "Descripcion": "Pizza de muzarela",
-        "Precio": 950,
+        "Precio": 1550,
         "Foto": "./img/dish-4.png",
         "Categoria": "Plato principal"
     },
@@ -43,7 +43,7 @@
         "Id": 6,
         "Nombre": "Postres",
         "Descripcion": "Galletitas rellena de chocolate",
-        "Precio":  715,
+        "Precio":  1015,
         "Foto": "./img/dish-5.png",
         "Categoria": "Postre"
     },
@@ -51,7 +51,7 @@
         "Id": 7,
         "Nombre": "Pollo Frito",
         "Descripcion": "Pollo frito y crocante",
-        "Precio":  850,
+        "Precio":  1550,
         "Foto": "./img/dish-6.png",
         "Categoria": "Minutas"
     },
@@ -59,15 +59,15 @@
         "Id": 8,
         "Nombre": "Pizzas Especiales",
         "Descripcion": "Pizza con longaniza",
-        "Precio":  812,
+        "Precio":  1812,
         "Foto": "./img/menu-1.jpg",
-        "Categoria": "Platos Principal"
+        "Categoria": "Plato principal"
     },
     {
         "Id": 9,
         "Nombre": "Especial Hamburgesas",
         "Descripcion": "Tiene tomate, lechuga y pepino",
-        "Precio": 800,
+        "Precio": 1800,
         "Foto": "./img/menu-2.jpg",
         "Categoria": "Minutas"
     },
@@ -75,7 +75,7 @@
         "Id": 10,
         "Nombre": "Panqueques",
         "Descripcion": "Panqueque con dulce de leche",
-        "Precio": 910,
+        "Precio": 1710,
         "Foto": "./img/menu-3.jpg",
         "Categoria": "Postres"
     },
@@ -83,7 +83,7 @@
         "Id": 11,
         "Nombre": "Helado Especial",
         "Descripcion": "Una bocha de Helado ",
-        "Precio": 612,
+        "Precio": 1612,
         "Foto": "./img/menu-4.jpg",
         "Categoria": "Postres"
     },
@@ -91,7 +91,7 @@
         "Id": 12,
         "Nombre": "Torta de frutos rojos",
         "Descripcion": "Deliciosa torta de frutos rojos",
-        "Precio":550,
+        "Precio": 1550,
         "Foto": "./img/menu-5.jpg",
         "Categoria": "Postres"
     },
@@ -99,7 +99,7 @@
         "Id": 13,
         "Nombre": "Mix de frutos ",
         "Descripcion": "Un mix natural",
-        "Precio":812,
+        "Precio": 1812,
         "Foto": "./img/menu-8.jpg",
         "Categoria": "Postres"
     },
@@ -107,7 +107,7 @@
         "Id": 14,
         "Nombre": "Jugos",
         "Descripcion": "Una riquisima bariedad de jugos ",
-        "Precio":512,
+        "Precio": 1512,
         "Foto": "./img/menu-7.jpg",
         "Categoria": "Bebidas"
     },
@@ -115,9 +115,26 @@
         "Id": 15,
         "Nombre": "Pastas",
         "Descripcion": "Riquisimas pastas casera ",
-        "Precio": 1500,
+        "Precio": 2500,
         "Foto": "./img/home-img-1.png",
-        "Categoria": "Pastas"
+        "Categoria": "Plato principal"
+    },  
+    
+    {
+        "Id": 15,
+        "Nombre": "Vino",
+        "Descripcion": "Riquisimas vino ",
+        "Precio": 3500,
+        "Foto": "./img/vino.webp",
+        "Categoria": "Bebidas"
+    },  
+    {
+        "Id": 15,
+        "Nombre": "Cerveza",
+        "Descripcion": "Riquisimas cerveza ",
+        "Precio": 1500,
+        "Foto": "./img/cerveza.webp",
+        "Categoria": "Bebidas"
     }   
     
 ]

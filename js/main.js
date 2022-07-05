@@ -24,8 +24,9 @@ export const renderCard = (data) => {
                 <div class="card-body">
                     <img id="fotoProducto" src="${producto.Foto}" class="card-img-top">
                     <h5 id="tituloProducto">${producto.Nombre}</h5>
-                    <p id="descripcionProducto">${producto.Descripcion}</p>
+                    <p id="descripcionProducto" >${producto.Descripcion} </p>
                     <p id="precioProducto">${divisa}${producto.Precio}</p>
+                    <p id="categoriaProducto">${producto.Categoria}</p>
                     <button data-id="${producto.Id}" id="mybtn" name="btnComprar" class="btn btn-success">Comprar</button>
                 </div>
               </div>
