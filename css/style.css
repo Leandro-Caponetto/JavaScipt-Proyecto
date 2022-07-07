@@ -140,14 +140,17 @@ header {
 }
 
 
-#productos h5 {
-    font-size: 2rem;
-    color: #27ae60;
+#productos .card-body h5 {
+    font-size: 30px;
+    color: red;
+    -webkit-text-stroke: 1px #000;
     text-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+    font-family: 'Smooch', cursive;
+    
 }
 
-p {
-    font-size: 2rem;
+#productos .card-body p {
+    font-size: 15px;
     text-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
 }
 
@@ -877,6 +880,12 @@ label {
     letter-spacing: 0.05em;
     border-radius: 20em;
 }
+#mybtn:hover{
+    color: red;
+    background: linear-gradient(0deg, rgb(21, 111, 172) 0%, rgb(139, 217, 248) 100%);
+}
+
+
 
 #vaciar-carrito {
     font-weight: bold;

@@ -116,24 +116,32 @@
         "Nombre": "Pastas",
         "Descripcion": "Riquisimas pastas casera ",
         "Precio": 2500,
-        "Foto": "./img/home-img-1.png",
+        "Foto": "./img/home-img-1.png ",
         "Categoria": "Plato principal"
     },  
     
     {
         "Id": 15,
         "Nombre": "Vino",
-        "Descripcion": "Riquisimas vino ",
+        "Descripcion": "Riquisimos vinos ",
         "Precio": 3500,
-        "Foto": "./img/vino.webp",
+        "Foto": "./img/vino.png",
         "Categoria": "Bebidas"
     },  
     {
         "Id": 15,
         "Nombre": "Cerveza",
-        "Descripcion": "Riquisimas cerveza ",
-        "Precio": 1500,
+        "Descripcion": "Riquisimas cerveza 1L",
+        "Precio": 700,
         "Foto": "./img/cerveza.webp",
+        "Categoria": "Bebidas"
+    },   
+    {
+        "Id": 15,
+        "Nombre": "Gaseosas",
+        "Descripcion": "Riquisimas gaseosas 2L",
+        "Precio": 500,
+        "Foto": "./img/gaseosas.webp",
         "Categoria": "Bebidas"
     }   
     

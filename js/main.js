@@ -22,7 +22,7 @@ export const renderCard = (data) => {
       <div class="col-12 mb-2 col-md-4 col-sm-4 ">
             <div class="card">
                 <div class="card-body">
-                    <img id="fotoProducto" src="${producto.Foto}" class="card-img-top">
+                    <img id="fotoProducto" src="${producto.Foto}" class="card-img-top" width="50">
                     <h5 id="tituloProducto">${producto.Nombre}</h5>
                     <p id="descripcionProducto" >${producto.Descripcion} </p>
                     <p id="precioProducto">${divisa}${producto.Precio}</p>
