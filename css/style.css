@@ -1005,7 +1005,7 @@ footer {
     outline: 2px solid #fff;
     transition-property: outline-offset, outline-color, background-color;
     transition-duration: .25s;
-    box-shadow: 0 5px 5px rgba(53, 53, 53, 0.329) 
+     
 }
 .icon:hover{
     outline-offset: 4px;
